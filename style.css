@@ -1,10 +1,10 @@
+  /* setting the width of the page for desktop */
   body{
     min-width: 1300px;
 
   }
   
-  
-  
+  /* setting pagewide header selectors */
   header{
       background: #FF6634;
       font-size: 25px;
@@ -14,40 +14,41 @@
       min-width: 1300px;
   }
 
+  /* setting the menu list */
   ul {
-    border:1px solid black;
     margin:0.5em;
     padding:0.3em;
     display: flex;
     flex-direction:row;
     align-items: flex-start;
   }
-
   li {
     display:flex;
-    margin:40px 20px 0 0;
+    margin:90px 20px 0 0;
     padding:0.3em;
     background: rgba(0, 0, 0, 0.5);
   }
  
+  /* setting the signup button selectors */
   button{
     background: rgb(1, 51, 52);
 		color: white;
     font-family: Teko, Open Sans;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
   }
- 
-    a {
+
+  /* setting the color of all links white */
+  a {
     color: white;
   }
 
-
+  /* setting homepage selectors */
   .home{
     background: rgb(1, 51, 52);
 		color: white;
     font-family: Teko, Open Sans;
-    font-size: 40px;
+    font-size: 55px;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -55,6 +56,7 @@
     
   }
 
+  /* setting homepage top element specific selectors */
   .home_top {
     display:flex;
     flex-direction: row;
@@ -63,8 +65,7 @@
     width: 90%;
   }
 
-
-
+  /* setting homepage video selectors */
   .home_iframe-container{
   position: relative;
   width: auto;
@@ -79,14 +80,14 @@
   height: 100%;
   }
 
+  /* setting homepage bottom element specific selectors */
   .home_bottom{
-    border:1px solid black;
     margin:auto;
     padding: 20px;
     font-size: 30px;
-
   }
 
+  /* setting intropage selectors */
   .intro{
     background: rgb(1, 51, 52);
 		color: white;
@@ -97,6 +98,7 @@
     text-align: center;
   }
 
+  /* setting intropage top element specific selectors */
    .intro_top {
     font-family: Open Sans, Teko;
     font-size: 20px;
@@ -107,8 +109,8 @@
     text-align: left;
   }
 
+  /* setting intropage bottom element specific selectors */
   .intro_bottom{
-    border:1px solid black;
 		font-family: Open Sans, Teko;
     font-size: 20px;
     margin:auto;
@@ -116,6 +118,7 @@
     text-align: left;
   }
 
+  /* setting merchpage selectors */
   .merch{
     background: rgb(1, 51, 52);
 		color: white;
@@ -126,12 +129,13 @@
     text-align: center;
   }
 
+  /* setting merchpage top element specific selectors */
   .merch_top{
     padding: 20px;
     font-size: 25px;
   }
 
-
+  /* setting signuppage selectors */
   .signup{
     background: rgb(1, 51, 52);
 		color: white;
@@ -142,6 +146,7 @@
     text-align: center;
   }
 
+  /* setting form selectors */
   form {
   padding: 20px;
   display:flex;
@@ -150,50 +155,78 @@
   text-align: left;
   }
 
-
+  /* setting label selectors */
   label {
   display: block;
   width: 200px;
   text-align: left;
   } 
 
+  /* rounding borders of input boxes */
+  input{
+     border-radius: 6px;
+  }
 
+  /* setting automargin to all paragraphs */
   p {
     margin:auto;
   }
 
-footer{
+  /* setting footer selectors */
+  footer{
   background: rgb(0, 0, 0);
   display: inline-block
   min-width: 1300px;
 }
 
-  
-@property --num {
+  /* code from https://css-tricks.com/animating-number-counters/ */
+  @property --num {
   syntax: "<integer>";
   initial-value: 0;
   inherits: false;
-}
-
-number {
+  }
+  number {
   animation: counter 3s 1 alternate ease-out;
   animation-fill-mode: forwards;
   counter-reset: num var(--num);
-  font: 10 60px Teko;
-}
-number::after {
+  font: 10 80px Teko;
+  }
+  number::after {
   content: counter(num);
-}
-
-@keyframes counter {
+  }
+  @keyframes counter {
   from {
     --num: 0;
   }
   to {
     --num: 312432;
+    }
   }
 
-
-
-  @media only screen and (max-width: 768px) {
+  /* changing selector values for below 800px width (for mobile screen)  */
+  @media only screen and (max-width: 800px) {
+  body{
+    min-width: 800px;
+  }
+  header{
+      background: #FF6634;
+      font-size: 25px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      min-width: 800px;
+  }
+  ul {
+    margin:0.4em;
+    padding:0.01em;
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+  }
+  li {
+    display:flex;
+    margin:10px 5px 0 0;
+    padding:0.3em;
+    background: rgba(0, 0, 0, 0.5);
+    }
   }
