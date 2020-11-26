@@ -1,3 +1,10 @@
+  body{
+    min-width: 1300px;
+
+  }
+  
+  
+  
   header{
       background: #FF6634;
       font-size: 25px;
@@ -28,16 +35,11 @@
 		color: white;
     font-family: Teko, Open Sans;
     font-size: 20px;
-    text-align: center
+    text-align: center;
   }
  
     a {
-    border:1px solid black;
-    font-size: 20;
-    margin:auto;
-    padding: 10px;
     color: white;
-    text-align: center
   }
 
 
@@ -48,7 +50,7 @@
     font-size: 40px;
     margin: 0;
     padding: 0;
-    text-align: center
+    text-align: center;
     
     
   }
@@ -57,9 +59,11 @@
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    text-align: center
+    text-align: center;
     width: 90%;
   }
+
+
 
   .home_iframe-container{
   position: relative;
@@ -90,6 +94,7 @@
     font-size: 20px;
     margin: 0;
     padding: 0px;
+    text-align: center;
   }
 
    .intro_top {
@@ -99,6 +104,7 @@
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
+    text-align: left;
   }
 
   .intro_bottom{
@@ -107,20 +113,22 @@
     font-size: 20px;
     margin:auto;
     padding: 0 100px 0 100px;
-    width: 90%;
+    text-align: left;
   }
 
   .merch{
     background: rgb(1, 51, 52);
 		color: white;
 		font-family: Teko, Open Sans;
-    font-size: 10px;
+    font-size: 40px;
     margin: 0;
     padding: 0;
+    text-align: center;
   }
 
   .merch_top{
     padding: 20px;
+    font-size: 25px;
   }
 
 
@@ -131,6 +139,7 @@
     font-size: 20px;
     margin: 0;
     padding: 0;
+    text-align: center;
   }
 
   form {
@@ -138,12 +147,14 @@
   display:flex;
   flex-direction: column;
   width:200px;
+  text-align: left;
   }
 
 
   label {
   display: block;
   width: 200px;
+  text-align: left;
   } 
 
 
@@ -151,8 +162,38 @@
     margin:auto;
   }
 
-
+footer{
+  background: rgb(0, 0, 0);
+  display: inline-block
+  min-width: 1300px;
+}
 
   
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+number {
+  animation: counter 3s 1 alternate ease-out;
+  animation-fill-mode: forwards;
+  counter-reset: num var(--num);
+  font: 10 60px Teko;
+}
+number::after {
+  content: counter(num);
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 312432;
+  }
+
+
+
   @media only screen and (max-width: 768px) {
   }
